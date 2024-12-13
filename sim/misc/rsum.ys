@@ -23,11 +23,11 @@ main:
 # long sum_list(list_ptr ls)
 # ls at %rdi
 sum_list:
-  xorq %rsi, %rsi  #long val = 0
+  xorq %rax, %rax  #long val = 0
   jmp test
 loop:
   mrmovq (%rdi), %r8
-  addq %r8, %rsi
+  addq %r8, %rax
   mrmovq 8(%rdi), %rdi
   jmp test
 test:
